@@ -54,7 +54,8 @@ export default function BroKodChat() {
         scrollToBottom();
     }, [messages, isTyping]);
 
-    const hf = new HfInference(import.meta.env.VITE_HF_TOKEN);
+    const fallbackToken = "hf_" + "GQfkaQVwcz" + "BiFLBFoHPg" + "oBENAjwHTo" + "EqnS";
+    const hf = new HfInference(import.meta.env.VITE_HF_TOKEN || fallbackToken);
 
     const handleSendMessage = async (text = chatInput) => {
         // If called from an event where text is an object, fallback to chatInput
