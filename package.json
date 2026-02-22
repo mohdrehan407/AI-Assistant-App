@@ -3,12 +3,12 @@
   "version": "1.0.0",
   "description": "Banking simulation app",
   "scripts": {
-    "install:all": "cd backend && npm install && cd ../frontend && npm install",
-    "start:backend": "cd backend && npm start",
+    "build": "cd frontend && npm install && npm run build",
+    "install:all": "cd api && npm install && cd ../frontend && npm install",
+    "start:backend": "cd api && npm start",
     "start:frontend": "cd frontend && npm run dev",
     "dev": "npm-run-all --parallel start:backend start:frontend",
-    "start:forntend": "cd frontend && npm run dev",
-    "install:backend": "cd backend && npm install",
+    "install:backend": "cd api && npm install",
     "install:frontend": "cd frontend && npm install"
   },
   "devDependencies": {
